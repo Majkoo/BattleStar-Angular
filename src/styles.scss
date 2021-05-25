@@ -1,0 +1,35 @@
+body {
+   overflow: hidden;
+
+   background-image: url('./assets/img/bckg.png');
+   background-size: stretch;
+
+}
+::-webkit-scrollbar {
+   border: solid #2e2e55 2px;
+   border-radius: 4px;
+
+}
+::-webkit-scrollbar-thumb {
+   border: solid #2e2e55 2px;
+   border-radius: 5px;
+   height: 45px;
+   background-color: #37946e;
+}
+::-webkit-scrollbar-thumb:hover {
+   background: #2a7053;
+}
+
+.basicBorder {
+   border: 20px solid ;
+   border-image: url('./assets/img/border.png') stretch 30%;
+}
+.basicBorder20 {
+   border: 20px solid ;
+   border-image: url('./assets/img/border.png') stretch 20%;
+}
+
+#shipFormDiv {
+   position: absolute;
+   background-image: url('./assets/img/ShipCreator.png');
+}

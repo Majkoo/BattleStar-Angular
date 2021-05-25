@@ -1,0 +1,88 @@
+#statList {
+
+   color: #56dd93;
+
+   #clickField1 {
+      position: absolute;
+      transform: translate(-50%);
+      width: 30%;
+      height: 25px;
+
+      top: 0px;
+      left: 350px;
+      background-color: #3f3f745e;
+      border: 3px solid #37946d67;
+      border-top: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+   }
+   #statField {
+      transition: ease 0.7s;
+      position: absolute;
+      transform: translate(-50%);
+      width: 30%;
+      height: 350px;
+
+      background-color: #3f3f74;
+
+      border: 10px solid #37946e;
+      border-top: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      left: 350px;
+   }
+   #clickField2 {
+      position: relative;
+      transform: translate(-50%);
+      width: 30px;
+      height: 30px;
+
+      top: 2.5%;
+      left: 95%;
+      background-color: #3f3f74;
+      border: solid 3px #37946e;
+      border-radius: 10px;
+
+      color: #37946e;
+      text-align: center;
+      font-size: 20px;
+
+   }
+   .content {
+      padding-top: 0px;
+      padding-left: 35px;
+      padding-right: 35px;
+   }
+   tr {
+      padding-top: 10px;
+      font-size: 20px;
+   }
+   .title {
+      font-size: 36px;
+   }
+
+   #clickField2:hover {
+      background-color: #494983;
+   }
+   #clickField2:active {
+      border-color: #37946db6;
+      border-radius: 10px;
+      background-color: #3f3f74bd;
+   }
+}
+
+#ShipImg {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 60%;
+   left: 67%;
+   height: 140px;
+   width: 290px;
+
+   background-color: #35356188;
+   background-image: url('../../../../assets/img/ships/redship.png');
+   border: 2px dashed #37946e;
+   border-radius: 20px;
+}

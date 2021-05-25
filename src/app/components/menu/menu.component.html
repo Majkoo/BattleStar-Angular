@@ -1,0 +1,76 @@
+<!-- MAIN - MENU --> <!-- MAIN - MENU --> 
+<!-- MAIN - MENU --> <!-- MAIN - MENU -->
+
+<div class="basicBorder menu-main" *ngIf="menu.main">
+
+   <table>
+
+       <thead>
+           <p> Main Menu </p>
+       </thead>
+
+   <tbody>
+
+       <tr>
+           <td>
+               <button class="button" (click)="navReset() ; menu.shipForm = true"> New Game </button>
+           </td>
+       </tr>
+
+       <tr>
+           <td>
+               <button class="button" (click)="navReset() ; menu.options = true"> Options </button>
+           </td>
+       </tr>
+
+       <tr>
+           <td>
+               <button class="button" (click)="navReset() ; menu.others = true"> Other things </button>
+           </td>
+       </tr>
+
+   </tbody>
+
+   </table>
+
+</div>
+
+<!-- OPTIONS - MENU --> <!-- OPTIONS - MENU -->
+<!-- OPTIONS - MENU --> <!-- OPTIONS - MENU -->
+<div 
+   class="basicBorder menu-main" 
+   id="menu-options"
+   *ngIf="menu.options">
+
+   <p> menu-options works! </p>
+   <button 
+      class="button" 
+      (click)="navReset() ; menu.main = true;"
+      > main menu 
+   </button>
+
+</div>
+
+<!-- OTHERS - MENU --> <!-- OTHERS - MENU -->
+<!-- OTHERS - MENU --> <!-- OTHERS - MENU -->
+<div 
+   class="basicBorder menu-main"
+   id="menu-others"
+   *ngIf="menu.others">
+
+   <p> menu-others works! </p>
+   <button 
+      class="button" 
+      (click)="navReset() ; menu.main = true;"
+      > main menu 
+   </button>
+
+</div>
+
+<!-- SHIP - FORM --> <!-- SHIP - FORM -->
+<!-- SHIP - FORM --> <!-- SHIP - FORM -->
+<app-ship-form
+*ngIf="menu.shipForm"
+(startGameEvent)="navReset() ; startGame()"
+>
+</app-ship-form>

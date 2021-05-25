@@ -1,0 +1,40 @@
+<div id="statList">
+
+   <div id="clickField1" (click)="statField.clicked = !statField.clicked" [style.visibility]="statField.clicked ? 'hidden': 'visible'"> </div>
+
+   <div id="statField" [style.top]="statField.clicked ? '0px': '-400px'">
+   
+   <button id="clickField2" (click)="statField.clicked = !statField.clicked"> </button>
+   
+      <div class="content" [(ngModel)]="statField"> 
+
+            <p class="title"> {{ statField.ShipName }} </p>
+         <table>
+            <tbody>
+              <tr>
+                <td> Damage:  </td>
+                <td> {{ statField.ShipDamage }} </td>
+              </tr>
+              <tr>
+                <td> Health: </td>
+                <td> {{ statField.ShipHealth }} </td>
+              </tr>
+              <tr>
+                <td> Speed: </td>
+                <td> {{ statField.ShipSpeed }} </td>
+              </tr>
+              <tr>
+                <td> Tech: </td>
+                <td> {{ statField.ShipTech }} </td>
+              </tr>
+              <tr>
+                <td> Accuracy: </td>
+                <td> {{ statField.ShipAccuracy }} </td>
+              </tr>
+            </tbody>
+         </table>
+         <div id="ShipImg"></div>
+      </div>
+   </div>
+</div>
+

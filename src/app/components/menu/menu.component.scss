@@ -1,0 +1,59 @@
+.menu-main {
+
+   position: absolute;
+   transform: translate(-50%,-50%);
+
+   background-color: #3f3f74;
+
+   top: 40%;
+   left: 50%;
+
+   width: 350px;
+   height: 400px;
+
+   table {
+      /* TUTAJ NAJLEPIEJ ZROBIC PODOBNA GRAFIKE JAKA MA SHIPCREATOR */
+      position: relative;
+      transform: translate(-50%,-50%);
+   
+      top: 45%;
+      left: 50%;
+   
+      text-align: center;
+      font-size: 36px;
+      color: #56dd93;
+   
+   }
+
+}
+
+.button {
+
+   border: solid 2px;
+   border-color: #37946e;
+   border-radius: 5px;
+   background-color: #3f3f74;
+
+   margin-right: 3px;
+   padding: 2px;
+   color: #56dd93;
+   width: 150px;
+   height: 40px;
+   margin-top: 20px
+
+}
+
+.button:disabled {
+   border-color: #56dd934f;
+}
+.button:hover {
+   background-color: #494983;
+}
+.button:active {
+
+   border-color: #37946db6;
+   border-radius: 6px;
+   background-color: #3f3f74bd;
+
+}
+

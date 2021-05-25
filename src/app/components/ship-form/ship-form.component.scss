@@ -1,0 +1,102 @@
+// STARY CSS, DO REFACTORA BO NAPISANY JAKBY GO DEBIL PISAL
+
+#shipFormDiv input[type=number] {
+   -moz-appearance: textfield;
+ }
+#shipFormDiv input::-webkit-outer-spin-button,
+#shipFormDiv input::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+ margin: 0;
+}
+
+
+#shipFormDiv {
+
+   /* visibility: hidden; */
+   transform:translate(-50%,-50%);
+   position: absolute;
+   
+   width: 350px;
+   height: 400px;
+   left: 50%;
+   top: 40%;
+
+}
+
+#shipFormDiv table {
+
+   color: #56dd93;
+
+   padding-top: 100px;
+   padding-left: 20px;
+
+}
+#shipFormDiv .statInput {
+
+   background-color: #3f3f74;
+
+   border: solid 2px;
+   border-color: #37946e;
+   border-radius: 5px;
+
+   width: 25px;
+   padding: 2px;
+   margin-right:10px;
+   margin-top: 2px;
+   color: #56dd93;
+   text-align: center;
+
+}
+#shipFormDiv #nameInput {
+
+   padding-left: 5px;
+   padding-right: 5px;
+   background-color: #3f3f74;
+   width:120px;
+
+   border: solid 2px;
+   border-color: #37946e;
+   border-radius: 5px;
+
+   color: #56dd93;
+
+}
+
+#shipFormDiv .button {
+
+   border: solid 2px;
+   border-color: #37946e;
+   border-radius: 5px;
+   background-color: #3f3f74;
+
+   margin-right: 3px;
+   padding: 2px;
+   color: #56dd93;
+   width: 25px;
+
+}
+#shipFormDiv .button:disabled {
+   border-color: #56dd934f;
+}
+#shipFormDiv .button:hover {
+   background-color: #494983;
+}
+#shipFormDiv .button:active {
+
+   border-color: #37946db6;
+   border-radius: 6px;
+   background-color: #3f3f74bd;
+
+}
+#shipFormDiv #createBtn {
+
+   transform: translate(-50%, -50%);
+   position: absolute;
+   font-size: 16px;
+
+   height: 10%;
+   width: 44%;
+   left: 50%;
+   bottom: 2%;
+
+}

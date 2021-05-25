@@ -1,0 +1,32 @@
+p {
+   color: #56dd93;
+}
+
+.planet {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   border-radius: 100%;
+   width: 455px;
+   height: 455px;
+}
+#arenaPlanet {
+   border: 1px solid rgba(255, 68, 0, 0.5);
+   background-color: rgba(255, 68, 0, 0.5);
+   background-image: url('../../../assets/img/arena.png');
+   top: 35%;
+   left: 80%;
+}
+#arenaPlanet:hover {
+   border: 4px solid rgba(255, 68, 0, 0.5);
+}
+#shopPlanet {
+   border: 1px solid rgba(0, 148, 0, 0.5);
+   background-color: rgba(0, 148, 0, 0.5);
+   top: 65%;
+   left: 15%;
+   background-image: url('../../../assets/img/shop.png');
+}
+#shopPlanet:hover {
+   border: 4px solid rgba(0, 148, 0, 0.5);
+}
+

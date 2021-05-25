@@ -1,0 +1,55 @@
+<app-stat-field
+*ngIf="gameNav.statField">
+</app-stat-field>
+
+<div 
+      id="shopPlanet"
+
+   class="planet" 
+   *ngIf="gameNav.shopPlanet"
+   (click)="resetNav() ; gameNav.insideShop = true">
+</div>
+
+<div  id="arenaPlanet" 
+
+   class="planet" 
+   *ngIf="gameNav.arenaPlanet"
+   (click)="resetNav() ; gameNav.insideArena = true">
+</div>
+
+
+<div  id="shop"
+
+   class="inside"
+   *ngIf="gameNav.insideShop">
+
+   <div>
+      <p> SHOP </p>
+      <p> Please imagine that you are in intergalactic shop </p>
+
+      <button 
+      (click)="resetNav() ; gameNav.statField = true ; gameNav.shopPlanet = true ; gameNav.arenaPlanet = true"
+      > 
+         go back (imagine going out of the intergalactic shop)
+      </button>
+   </div>
+
+</div>
+
+<div  id="arena"
+
+   class="inside"
+   *ngIf="gameNav.insideArena">
+
+   <div>
+      <p> ARENA </p>
+      <p> Please imagine that you are in intergalactic battle ship arena </p>
+
+      <button 
+      (click)="resetNav() ; gameNav.statField = true ; gameNav.shopPlanet = true ; gameNav.arenaPlanet = true"
+      > 
+         go back (imagine going out of the intergalactic battle ship arena)
+      </button>
+   </div>
+
+</div>

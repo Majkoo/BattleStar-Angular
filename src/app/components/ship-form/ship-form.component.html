@@ -1,0 +1,105 @@
+<div class="basicBorder" id="shipFormDiv">
+   <table>
+
+         <thead>
+            <tr>
+               <td>
+                     Name:
+               </td>
+               <td>
+                     <input type="text"
+                     placeholder="Ship Name"
+                     id="nameInput" 
+                     [(ngModel)]="formValues.name"/>
+               </td>
+            </tr>
+         </thead>
+
+   <tbody>
+
+      <tr>
+         <td> 
+            Damage:
+         </td>
+
+         <td>
+           <input  class="statInput" type="number" [(ngModel)]="formValues.damage" disabled />
+           <button class="button" [disabled]="formValues.damage <= 1"     (click)="formValues.damage = (formValues.damage-1) ; formValues.statPoints = (formValues.statPoints+1)">-</button>
+           <button class="button" [disabled]="formValues.statPoints <= 0" (click)="formValues.damage = (formValues.damage+1) ; formValues.statPoints = (formValues.statPoints-1)">+</button>
+         </td>
+      </tr>
+
+      <tr>
+         <td>
+            Speed:
+         </td>
+         <td>
+            <input  class="statInput" type="number" [(ngModel)]="formValues.speed" disabled />
+            <button class="button" [disabled]="formValues.speed <= 1"      (click)="formValues.speed = (formValues.speed-1) ; formValues.statPoints = (formValues.statPoints+1)">-</button>
+            <button class="button" [disabled]="formValues.statPoints <= 0" (click)="formValues.speed = (formValues.speed+1) ; formValues.statPoints = (formValues.statPoints-1)">+</button>
+         </td>
+      </tr>
+
+      <tr>
+         <td>
+            Health:
+         </td>
+
+         <td>
+           <input  class="statInput" type="number" [(ngModel)]="formValues.health" disabled />
+           <button class="button" [disabled]="formValues.health <= 1"     (click)="formValues.health = (formValues.health-1) ; formValues.statPoints = (formValues.statPoints+1)">-</button>
+           <button class="button" [disabled]="formValues.statPoints <= 0" (click)="formValues.health = (formValues.health+1) ; formValues.statPoints = (formValues.statPoints-1)">+</button>
+         </td>
+      </tr>
+
+      <tr>
+         <td>
+            Tech:
+         </td>
+
+         <td>
+            <input  class="statInput" type="number" [(ngModel)]="formValues.tech" disabled />
+            <button class="button" [disabled]="formValues.tech <= 1"       (click)="formValues.tech = (formValues.tech-1) ; formValues.statPoints = (formValues.statPoints+1)">-</button>
+            <button class="button" [disabled]="formValues.statPoints <= 0" (click)="formValues.tech = (formValues.tech+1) ; formValues.statPoints = (formValues.statPoints-1)">+</button>
+         </td>
+      </tr>
+
+      <tr>
+         <td>
+            Accuracy:
+         </td>
+
+         <td>
+            <input  class="statInput" type="number" [(ngModel)]="formValues.accuracy" disabled />
+            <button class="button" [disabled]="formValues.accuracy <= 1"   (click)="formValues.accuracy = (formValues.accuracy-1) ; formValues.statPoints = (formValues.statPoints+1)">-</button>
+            <button class="button" [disabled]="formValues.statPoints <= 0" (click)="formValues.accuracy = (formValues.accuracy+1) ; formValues.statPoints = (formValues.statPoints-1)">+</button>
+         </td>
+      </tr>
+
+      <tr>
+
+         <td>
+            Stat Points:
+         </td>
+
+         <td>
+            <input  class="statInput" type="number" [(ngModel)]="formValues.statPoints" disabled>
+         </td>
+
+      </tr>
+
+      <tr>
+         <td>
+         </td>
+         <td>
+            <button 
+               class="button"
+               id="createBtn"
+               [disabled]="formValues.statPoints > 0" 
+               (click)="CreateShip()" (click)="startGameEvent.emit()"> Create new ship </button></td>
+         </tr>
+
+   </tbody>
+   </table>
+
+</div>
