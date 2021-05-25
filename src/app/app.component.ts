@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppModel } from 'src/Models/navModel';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'attempt-five';
 
-  AppNav = {
-      game: false,
-      menu: false,
-  };
+  AppNav: AppModel;
 
-  ngOnInit(): void {
-     this.AppNav.game = true;
-     this.AppNav.menu = false;
-  }
+   ngOnInit(): void {
+      this.AppNav = {
+         game: false,
+         menu: true,
+      };
+   }
+
 }
