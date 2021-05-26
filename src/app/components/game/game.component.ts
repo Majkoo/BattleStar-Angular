@@ -7,20 +7,18 @@ import { GameModel } from 'src/Models/navModel';
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
-export class GameComponent implements OnInit {
+export class GameComponent {
 
-   gameNav: GameModel;
 
-   ngOnInit(): void {
-      this.gameNav = {
-         statField:     true,
-         arenaPlanet:   true,
-         shopPlanet:    true,
-         insideShop:    false,
-         insideArena:   false,
-      };
+   gameNav: GameModel = {
+      statField:     true,
+      arenaPlanet:   true,
+      shopPlanet:    true,
+      insideShop:    false,
+      insideArena:   false,
+      battle:        false,
+   };
 
-   }
 
    resetNav(): void {
       this.gameNav = {
@@ -29,9 +27,8 @@ export class GameComponent implements OnInit {
          shopPlanet:    false,
          insideShop:    false,
          insideArena:   false,
+         battle:        false,
       };
    }
-
-
 
 }

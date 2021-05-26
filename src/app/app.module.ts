@@ -7,6 +7,8 @@ import { GameComponent } from './components/game/game.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ShipFormComponent } from './components/ship-form/ship-form.component';
 import { StatFieldComponent } from './components/game/stat-field/stat-field.component';
+import { ArenaInComponent } from './components/game/arena-in/arena-in.component';
+import { BattleComponent } from './components/game/battle/battle.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { StatFieldComponent } from './components/game/stat-field/stat-field.comp
     GameComponent,
     MenuComponent,
     ShipFormComponent,
-    StatFieldComponent
+    StatFieldComponent,
+    ArenaInComponent,
+    BattleComponent
   ],
   imports: [
     BrowserModule,

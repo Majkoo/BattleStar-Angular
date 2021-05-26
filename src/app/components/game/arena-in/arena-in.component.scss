@@ -1,0 +1,93 @@
+#enemyField {
+   color: #56dd93;
+
+   transform: translate(-50%, -50%);
+
+   position: absolute;
+   top: 18%;
+   left: 70%;
+
+   .statField {
+      padding: 20px;
+      transition: ease 0.7s;
+      position: absolute;
+      transform: translate(-50%);
+      height: 300px;
+      width: 500px;
+
+      background-color: #3f3f74;
+
+      border: 20px solid #37946e;
+      border-image: url('../../../../assets/img/border.png') 30% repeat;
+
+      .title {
+         font-size: 36px;
+      }
+      td {
+         font-size: 20px;
+      }
+      table {
+         width: 150px;
+      }
+   }
+   #enemyImg {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 60%;
+      left: 68%;
+      height: 140px;
+      width: 290px;
+   
+      background-color: #35356188;
+      background-image: url('../../../../assets/img/ships/orangeship/orangeship.png');
+      border: 2px dashed #37946e;
+      border-radius: 20px;
+   }
+}
+
+#playerField {
+   color: #56dd93;
+
+   transform: translate(-50%, -50%);
+
+   position: absolute;
+   top: 18%;
+   left: 30%;
+
+   .statField {
+      padding: 20px;
+      transition: ease 0.7s;
+      position: absolute;
+      transform: translate(-50%);
+      height: 300px;
+      width: 500px;
+
+      background-color: #3f3f74;
+
+      border: 20px solid #37946e;
+      border-image: url('../../../../assets/img/border.png') 30% repeat;
+
+      .title {
+         font-size: 36px;
+      }
+      td {
+         font-size: 20px;
+      }
+      table {
+         width: 150px;
+      }
+   }
+   #playerImg {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 60%;
+      left: 68%;
+      height: 140px;
+      width: 290px;
+   
+      background-color: #35356188;
+      background-image: url('../../../../assets/img/ships/redship/redship.png');
+      border: 2px dashed #37946e;
+      border-radius: 20px;
+   }
+}

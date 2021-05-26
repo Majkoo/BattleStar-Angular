@@ -32,7 +32,6 @@ export class MenuComponent implements OnInit {
 
    startGame(): void {
       this.startGameEvent.emit();
-      console.log('Welcome!');
    }
 
 

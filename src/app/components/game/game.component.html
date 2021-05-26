@@ -27,7 +27,7 @@
       <p> SHOP </p>
       <p> Please imagine that you are in intergalactic shop </p>
 
-      <button 
+      <button
       (click)="resetNav() ; gameNav.statField = true ; gameNav.shopPlanet = true ; gameNav.arenaPlanet = true"
       > 
          go back (imagine going out of the intergalactic shop)
@@ -45,11 +45,25 @@
       <p> ARENA </p>
       <p> Please imagine that you are in intergalactic battle ship arena </p>
 
-      <button 
-      (click)="resetNav() ; gameNav.statField = true ; gameNav.shopPlanet = true ; gameNav.arenaPlanet = true"
-      > 
-         go back (imagine going out of the intergalactic battle ship arena)
+      <app-arena-in> </app-arena-in>
+
+      <button
+         class="arenaButton"
+         id="backBtn"
+         (click)="resetNav() ; gameNav.statField = true ; gameNav.shopPlanet = true ; gameNav.arenaPlanet = true"> 
+         go back
+      </button>
+
+      <button
+         class="arenaButton"
+         id="submitBtn"
+         (click)="resetNav() ; gameNav.battle = true"> 
+         Challenge!
       </button>
    </div>
 
+</div>
+
+<div *ngIf="gameNav.battle">
+   <app-battle></app-battle>
 </div>

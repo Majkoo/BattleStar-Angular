@@ -36,6 +36,8 @@ export class ShipFormComponent implements OnInit {
       this.dataService.playerShip.techPoints    = this.formValues.tech,
       this.dataService.playerShip.accuracyPoints = this.formValues.accuracy,
 
+      this.dataService.playerShip.statPoints = 0,
+
       this.dataService.syncShipPoints();
       console.log(this.dataService.playerShip);
    }

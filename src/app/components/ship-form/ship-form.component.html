@@ -10,7 +10,7 @@
                      <input type="text"
                      placeholder="Ship Name"
                      id="nameInput" 
-                     [(ngModel)]="formValues.name"/>
+                     [(ngModel)]="formValues.name" ngDefaultControl/>
                </td>
             </tr>
          </thead>
@@ -23,7 +23,7 @@
          </td>
 
          <td>
-           <input  class="statInput" type="number" [(ngModel)]="formValues.damage" disabled />
+           <input  class="statInput" type="number" [(ngModel)]="formValues.damage" disabled ngDefaultControl />
            <button class="button" [disabled]="formValues.damage <= 1"     (click)="formValues.damage = (formValues.damage-1) ; formValues.statPoints = (formValues.statPoints+1)">-</button>
            <button class="button" [disabled]="formValues.statPoints <= 0" (click)="formValues.damage = (formValues.damage+1) ; formValues.statPoints = (formValues.statPoints-1)">+</button>
          </td>
@@ -34,7 +34,7 @@
             Speed:
          </td>
          <td>
-            <input  class="statInput" type="number" [(ngModel)]="formValues.speed" disabled />
+            <input  class="statInput" type="number" [(ngModel)]="formValues.speed" disabled ngDefaultControl />
             <button class="button" [disabled]="formValues.speed <= 1"      (click)="formValues.speed = (formValues.speed-1) ; formValues.statPoints = (formValues.statPoints+1)">-</button>
             <button class="button" [disabled]="formValues.statPoints <= 0" (click)="formValues.speed = (formValues.speed+1) ; formValues.statPoints = (formValues.statPoints-1)">+</button>
          </td>
@@ -46,7 +46,7 @@
          </td>
 
          <td>
-           <input  class="statInput" type="number" [(ngModel)]="formValues.health" disabled />
+           <input  class="statInput" type="number" [(ngModel)]="formValues.health" disabled ngDefaultControl />
            <button class="button" [disabled]="formValues.health <= 1"     (click)="formValues.health = (formValues.health-1) ; formValues.statPoints = (formValues.statPoints+1)">-</button>
            <button class="button" [disabled]="formValues.statPoints <= 0" (click)="formValues.health = (formValues.health+1) ; formValues.statPoints = (formValues.statPoints-1)">+</button>
          </td>
@@ -58,7 +58,7 @@
          </td>
 
          <td>
-            <input  class="statInput" type="number" [(ngModel)]="formValues.tech" disabled />
+            <input  class="statInput" type="number" [(ngModel)]="formValues.tech" disabled ngDefaultControl />
             <button class="button" [disabled]="formValues.tech <= 1"       (click)="formValues.tech = (formValues.tech-1) ; formValues.statPoints = (formValues.statPoints+1)">-</button>
             <button class="button" [disabled]="formValues.statPoints <= 0" (click)="formValues.tech = (formValues.tech+1) ; formValues.statPoints = (formValues.statPoints-1)">+</button>
          </td>
@@ -70,7 +70,7 @@
          </td>
 
          <td>
-            <input  class="statInput" type="number" [(ngModel)]="formValues.accuracy" disabled />
+            <input  class="statInput" type="number" [(ngModel)]="formValues.accuracy" disabled ngDefaultControl />
             <button class="button" [disabled]="formValues.accuracy <= 1"   (click)="formValues.accuracy = (formValues.accuracy-1) ; formValues.statPoints = (formValues.statPoints+1)">-</button>
             <button class="button" [disabled]="formValues.statPoints <= 0" (click)="formValues.accuracy = (formValues.accuracy+1) ; formValues.statPoints = (formValues.statPoints-1)">+</button>
          </td>
@@ -83,7 +83,7 @@
          </td>
 
          <td>
-            <input  class="statInput" type="number" [(ngModel)]="formValues.statPoints" disabled>
+            <input  class="statInput" type="number" [(ngModel)]="formValues.statPoints" ngDefaultControl disabled>
          </td>
 
       </tr>

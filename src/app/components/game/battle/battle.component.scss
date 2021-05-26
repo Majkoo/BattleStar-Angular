@@ -1,0 +1,157 @@
+#Background {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+   width: 100%;
+   height: 100%;
+   background-image: url('../../../../assets/img/arenaBckg.png');
+   opacity: 0.35;
+
+}
+
+#controlPanel {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   border: solid 5px;
+   border-color: #37946d63;
+   border-radius: 13px;
+   bottom: 0%;
+   left: 50%;
+   width: 800px;
+   height: 100px;
+   color: #56dd93;
+   background-color: #3f3f7462;
+
+   .arenaButton {
+      transform: translate(-50%, -50%);
+      position: absolute;
+
+      border: solid 5px;
+      border-color: #37946e;
+      border-radius: 13px;
+      background-color: #3f3f74;
+
+      padding: 10px;
+      width: 130px;
+      color: #56dd93;
+   }
+   .arenaButton:hover {
+      background-color: #494983;
+   }
+   .arenaButton:active {
+      border-color: #37946db6;
+      border-radius: 15px;
+      background-color: #3f3f74bd;
+   }
+
+   #PreciseAttackBtn {
+      position: absolute;
+      top: 50%;
+      left: 67%;
+   }
+   #ModerateAttackBtn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+   }
+   #QuickAttackBtn {
+      position: absolute;
+      top: 50%;
+      left: 33%;
+   }
+}
+
+#BattleView {
+   transform: translate(-50%, -50%);
+   position: absolute;
+   border: solid 5px;
+   border-color: #37946e;
+   border-radius: 13px;
+   height: 75%;
+   width: 75%;
+   top: 39%;
+   left: 50%;
+   background-image: url('../../../../assets/img/bckg-old.png');
+   background-size: cover;
+
+   #PlayerGif {
+      transform: translate(-50%, -50%) scaleX(-1);;
+      position: absolute;
+      width: 362px;
+      height: 250px;
+      top: 45%;
+      left: 20%;
+      background-image: url('../../../../assets/img/ships/redship/redship-anim.gif');
+      background-size: cover;
+   }
+   #EnemyGif {
+      transform: translate(-50%, -50%);
+      position: absolute;
+      width: 362px;
+      height: 250px;
+      top: 45%;
+      left: 80%;
+      background-image: url('../../../../assets/img/ships/orangeship/orangeship-anim.gif');
+      background-size: cover;
+   }
+}
+#Logger {
+   overflow-y: auto;
+   transform: translate(-50%, -50%);
+   position: absolute;
+   width: 35%;
+   height: 20%;
+
+   top: 66.3%;
+   left: 50%;
+   background-color: rgba(2, 2, 71, 0.315);
+   border: 5px solid #37946d7e;
+   border-top-left-radius: 5px;
+   border-top-right-radius:  5px;
+   border-bottom: none;
+
+   #Content {
+      padding: 30px;
+      color: #56dd93;
+
+   }
+}
+.infoBox {
+   transform: translate(-50%, -50%);
+   position: absolute;
+   width: 400px;
+   height: 300px;
+   color: #56dd93;
+
+   .name {
+      transform: translate(-50%,-50%);
+      position:absolute;
+      top: 0;
+      left: 50%;
+      font-size: 24px;
+   }
+   .currentHealth {
+      transform: translate(-50%,-50%);
+      position:absolute;
+      top: 10%;
+      left: 50%;
+      font-size: 16px;
+   }
+   .damageTaken {
+      transform: translate(-50%,-50%);
+      position:absolute;
+      top: 90%;
+      left: 50%;
+      font-size: 24px;
+      color:red;
+   }
+}
+#PlayerInfo {
+   top: 45%;
+   left: 80%;
+}
+#EnemyInfo {
+   top: 45%;
+   left: 20%;
+}

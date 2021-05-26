@@ -22,11 +22,49 @@ p {
 #shopPlanet {
    border: 1px solid rgba(0, 148, 0, 0.5);
    background-color: rgba(0, 148, 0, 0.5);
-   top: 65%;
+   top: 67%;
    left: 15%;
    background-image: url('../../../assets/img/shop.png');
 }
 #shopPlanet:hover {
    border: 4px solid rgba(0, 148, 0, 0.5);
+}
+.arenaButton {
+   transform: translate(-50%, -50%);
+   position: absolute;
+
+   border: solid 5px;
+   border-color: #37946e;
+   border-radius: 13px;
+   background-color: #3f3f74;
+
+   padding: 2px;
+   color: #56dd93;
+}
+.arenaButton:hover {
+   background-color: #494983;
+}
+.arenaButton:active {
+   border-color: #37946db6;
+   border-radius: 15px;
+   background-color: #3f3f74bd;
+}
+#backBtn {
+   left: 50%;
+   top: 82%;
+
+   height: 70px;
+   width: 200px;
+
+   font-size: 24px;
+}
+#submitBtn {
+   left: 50%;
+   top: 70%;
+
+   height: 100px;
+   width: 300px;
+
+   font-size: 36px;
 }
 

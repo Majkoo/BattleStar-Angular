@@ -11,7 +11,9 @@ export interface GameModel {
    shopPlanet: boolean;
    insideShop: boolean;
    insideArena: boolean;
+   battle: boolean;
 }
+
 export interface AppModel {
    game: boolean;
    menu: boolean;
