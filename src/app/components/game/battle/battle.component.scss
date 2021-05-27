@@ -26,6 +26,7 @@
    .arenaButton {
       transform: translate(-50%, -50%);
       position: absolute;
+      transition: ease 0.1s;
 
       border: solid 5px;
       border-color: #37946e;
@@ -44,21 +45,35 @@
       border-radius: 15px;
       background-color: #3f3f74bd;
    }
-
-   #PreciseAttackBtn {
+   .arenaButton:disabled {
+      border-color: #37946d5e;
+      border-radius: 15px;
+      background-color: #3f3f7459;
+   }
+   #RunBtn {
       position: absolute;
       top: 50%;
-      left: 67%;
+      left: 16%;
+   }
+   #QuickAttackBtn {
+      position: absolute;
+      top: 50%;
+      left: 33%;
    }
    #ModerateAttackBtn {
       position: absolute;
       top: 50%;
       left: 50%;
    }
-   #QuickAttackBtn {
+   #PreciseAttackBtn {
       position: absolute;
       top: 50%;
-      left: 33%;
+      left: 67%;
+   }
+   #RepairBtn {
+      position: absolute;
+      top: 50%;
+      left: 84%;
    }
 }
 
@@ -129,14 +144,16 @@
       position:absolute;
       top: 0;
       left: 50%;
-      font-size: 24px;
+      font: bold;
+      font-size: 28px;
    }
    .currentHealth {
       transform: translate(-50%,-50%);
       position:absolute;
       top: 10%;
       left: 50%;
-      font-size: 16px;
+      font-size: 22px;
+      font: bold;
    }
    .damageTaken {
       transform: translate(-50%,-50%);
@@ -147,11 +164,11 @@
       color:red;
    }
 }
-#PlayerInfo {
+#EnemyInfo {
    top: 45%;
    left: 80%;
 }
-#EnemyInfo {
+#PlayerInfo {
    top: 45%;
    left: 20%;
 }

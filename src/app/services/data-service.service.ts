@@ -12,11 +12,11 @@ export class DataServiceService {
       experience: 0,
       name: 'Nameless',
 
-      damagePoints:  1,
-      speedPoints:   1,
-      healthPoints:  1,
+      damagePoints:  10,
+      speedPoints:   10,
+      healthPoints:  10,
       techPoints:    1,
-      accuracyPoints: 1,
+      accuracyPoints: 10,
 
       statPoints: 0,
 
@@ -32,7 +32,7 @@ export class DataServiceService {
 
       level: 1,
       experience: 0,
-      name: 'Nameless Enemy',
+      name: 'Galaktyczny Stec',
 
       damagePoints:  0,
       speedPoints:   0,
