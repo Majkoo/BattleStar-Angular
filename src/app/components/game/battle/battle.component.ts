@@ -23,6 +23,8 @@ export class BattleComponent {
    PlayerLRHealth = this.PlayerShip.cHealth;
 
    ButtonsDisabled = false;
+   PdmgVisible = false;
+   EdmgVisible = false;
 
 
    sleepNow = (delay: number) => new Promise((resolve) => setTimeout(resolve, delay));
@@ -53,14 +55,22 @@ export class BattleComponent {
 
       this.ButtonsDisabled = true;
 
-      await this.sleepNow(250);
+      this.PdmgVisible = false;
+      await this.sleepNow(120);
+      this.EdmgVisible = true;
+      await this.sleepNow(120);
       this.BattleService.Move(pMove, PlayerShip, EnemyShip);
       this.refresh();
 
+
       if (this.battleService.battle) {
-         await this.sleepNow(1500);
+         await this.sleepNow(1200);
+         this.EdmgVisible = false;
          this.BattleService.Move(eMove, EnemyShip, PlayerShip);
+         await this.sleepNow(300);
          this.refresh();
+         this.PdmgVisible = true;
+         await this.sleepNow(300);
       }
 
       this.ButtonsDisabled = false;

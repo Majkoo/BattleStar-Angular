@@ -19,6 +19,8 @@ export class DataServiceService {
       accuracyPoints: 10,
 
       statPoints: 0,
+      wins: 0,
+      loses: 0,
 
       damage:  0,
       speed:   0,
@@ -41,6 +43,8 @@ export class DataServiceService {
       accuracyPoints: 0,
 
       statPoints: 0,
+      wins: 0,
+      loses: 0,
 
       damage:  0,
       speed:   0,
@@ -51,9 +55,9 @@ export class DataServiceService {
    };
 
    syncShipPoints(): void {
-      this.playerShip.damage = this.playerShip.damagePoints * 15;
+      this.playerShip.damage = this.playerShip.damagePoints * 25;
       this.playerShip.speed = this.playerShip.speedPoints * 10;
-      this.playerShip.health = this.playerShip.healthPoints * 200;
+      this.playerShip.health = this.playerShip.healthPoints * 175;
       this.playerShip.tech = this.playerShip.techPoints * 10;
       this.playerShip.accuracy = this.playerShip.accuracyPoints * 10;
    }
@@ -65,13 +69,13 @@ export class DataServiceService {
       this.enemyShip.techPoints = this.playerShip.techPoints + Math.floor((Math.random() * 6) - 3);
       this.enemyShip.accuracyPoints = this.playerShip.accuracyPoints + Math.floor((Math.random() * 6) - 3);
 
-      this.enemyShip.damage = this.enemyShip.damagePoints * 15;
+      this.enemyShip.damage = this.enemyShip.damagePoints * 25;
       if ( this.enemyShip.damage < 45 ) { this.enemyShip.damage = 45; }
 
       this.enemyShip.speed = this.enemyShip.speedPoints * 10;
       if ( this.enemyShip.speed < 10 ) { this.enemyShip.speed = 10; }
 
-      this.enemyShip.health = this.enemyShip.healthPoints * 200;
+      this.enemyShip.health = this.enemyShip.healthPoints * 175;
       if ( this.enemyShip.health < 500 ) { this.enemyShip.health = 500; }
 
       this.enemyShip.tech = this.enemyShip.techPoints * 10;

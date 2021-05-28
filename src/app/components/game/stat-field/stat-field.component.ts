@@ -17,6 +17,8 @@ export class StatFieldComponent implements OnInit {
       ShipSpeed: 0,
       ShipTech: 0,
       ShipAccuracy: 0,
+      ShipWins: 0,
+      ShipLoses: 0,
    };
 
    constructor(dataService: DataServiceService) {
@@ -27,6 +29,9 @@ export class StatFieldComponent implements OnInit {
       this.statField.ShipSpeed = dataService.playerShip.speed;
       this.statField.ShipTech = dataService.playerShip.tech;
       this.statField.ShipAccuracy = dataService.playerShip.accuracy;
+
+      this.statField.ShipWins = dataService.playerShip.wins;
+      this.statField.ShipLoses = dataService.playerShip.loses;
    }
 
   ngOnInit(): void {

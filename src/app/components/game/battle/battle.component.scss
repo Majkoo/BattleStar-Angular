@@ -1,5 +1,6 @@
 #Background {
    position: absolute;
+   overflow: disabled;
    transform: translate(-50%, -50%);
    top: 50%;
    left: 50%;
@@ -158,10 +159,17 @@
    .damageTaken {
       transform: translate(-50%,-50%);
       position:absolute;
+      transition: ease 0.5s;
       top: 90%;
       left: 50%;
       font-size: 24px;
       color:red;
+   }
+   .visible {
+      opacity: 1;
+   }
+   .invisible {
+      opacity: 0;
    }
 }
 #EnemyInfo {
@@ -171,4 +179,27 @@
 #PlayerInfo {
    top: 45%;
    left: 20%;
+}
+
+#PlayerWin {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+
+   width: 300px;
+   height: 200px;
+   background-color: green;
+   opacity: 0.1;
+}
+#PlayerLose {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+
+   width: 300px;
+   height: 200px;
+   background-color: red;
+   opacity: 0.1;
 }
