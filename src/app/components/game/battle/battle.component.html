@@ -6,22 +6,17 @@
    <div class="infoBox" id="PlayerInfo">
       <div class="name"> {{ PlayerShip.name }} </div>
       <div class="currentHealth"> {{ PlayerShip.cHealth }} / {{ PlayerShip.maxHealth }} HP </div>
-<<<<<<< HEAD
       <div 
          class="damageTaken" 
          [ngClass]="PdmgVisible ? 'visible' : 'invisible'"> 
          {{ PlayerDmgTaken }}HP 
       </div>
-=======
-      <div class="damageTaken"> {{ PlayerDmgTaken }}HP </div>
->>>>>>> e9dcd62b1b24ae52cb1d51f2877cf0764a6c62e3
    </div>
 
    <div id="EnemyGif"></div>
    <div class="infoBox" id="EnemyInfo">
       <div class="name"> {{ EnemyShip.name }} </div>
       <div class="currentHealth"> {{ EnemyShip.cHealth }} / {{ EnemyShip.maxHealth }} HP </div>
-<<<<<<< HEAD
       <div 
          class="damageTaken" 
          [ngClass]="EdmgVisible ? 'visible' : 'invisible'"> 
@@ -37,9 +32,6 @@
    <div 
    id="PlayerLose"
    *ngIf="BattleService.destroyedShip === BattleService.PlayerBShip"> 
-=======
-      <div class="damageTaken"> {{ EnemyDmgTaken }}HP </div>
->>>>>>> e9dcd62b1b24ae52cb1d51f2877cf0764a6c62e3
    </div>
 
 </div>
@@ -82,7 +74,6 @@
       id="PreciseAttackBtn"
       [disabled]="ButtonsDisabled"
       (click)="Move(3, getRandom(1,3), PlayerShip, EnemyShip)">
-<<<<<<< HEAD
       Risky Attack
    </button>
 
@@ -95,18 +86,6 @@
    </button>
 
 
-=======
-      Precise Attack 
-   </button>
-
-   <button
-      class="arenaButton"
-      id="RepairBtn"
-      [disabled]="ButtonsDisabled"
-      (click)="Move(4, getRandom(1,3), PlayerShip, EnemyShip)">
-      Repair self
-   </button>
->>>>>>> e9dcd62b1b24ae52cb1d51f2877cf0764a6c62e3
 
 </div>
 
