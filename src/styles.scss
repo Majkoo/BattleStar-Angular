@@ -5,7 +5,7 @@ body {
 
 }
 ::-webkit-scrollbar {
-   border: solid #2e2e55 2px;
+   border: solid #2e2e555e 2px;
    border-radius: 4px;
 
 }
@@ -13,10 +13,10 @@ body {
    border: solid #2e2e55 2px;
    border-radius: 5px;
    height: 45px;
-   background-color: #37946e;
+   background-color: #37946d63;
 }
 ::-webkit-scrollbar-thumb:hover {
-   background: #2a7053;
+   background: #37946d7c;
 }
 
 .basicBorder {

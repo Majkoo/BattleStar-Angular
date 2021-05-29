@@ -14,7 +14,7 @@
 
    class="planet" 
    *ngIf="gameNav.arenaPlanet"
-   (click)="resetNav() ; gameNav.insideArena = true">
+   (click)="resetNav() ; gameNav.insideArena = true ; battleService.init()">
 </div>
 
 
@@ -65,5 +65,5 @@
 </div>
 
 <div *ngIf="gameNav.battle">
-   <app-battle></app-battle>
+   <app-battle (EndBattle)="resetNav() ; gameNav.statField = true ; gameNav.shopPlanet = true ; gameNav.arenaPlanet = true ; battleService.init()"></app-battle>
 </div>

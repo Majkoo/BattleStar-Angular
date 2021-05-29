@@ -17,12 +17,15 @@ export class StatFieldComponent implements OnInit {
       ShipSpeed: 0,
       ShipTech: 0,
       ShipAccuracy: 0,
+
+      ShipLevel: 0,
+      ShipExperience: 0,
       ShipWins: 0,
       ShipLoses: 0,
    };
 
    constructor(dataService: DataServiceService) {
-      dataService.syncShipPoints();
+      dataService.syncPoints();
       this.statField.ShipName = dataService.playerShip.name;
       this.statField.ShipDamage = dataService.playerShip.damage;
       this.statField.ShipHealth = dataService.playerShip.health;
@@ -30,8 +33,11 @@ export class StatFieldComponent implements OnInit {
       this.statField.ShipTech = dataService.playerShip.tech;
       this.statField.ShipAccuracy = dataService.playerShip.accuracy;
 
-      this.statField.ShipWins = dataService.playerShip.wins;
-      this.statField.ShipLoses = dataService.playerShip.loses;
+      this.statField.ShipLevel = dataService.playerShip.level;
+      this.statField.ShipExperience = dataService.playerShip.experience;
+      this.statField.ShipWins = dataService.playerData.wins;
+      this.statField.ShipLoses = dataService.playerData.losses;
+
    }
 
   ngOnInit(): void {

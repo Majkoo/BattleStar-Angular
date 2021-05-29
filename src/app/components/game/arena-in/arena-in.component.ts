@@ -18,7 +18,7 @@ export class ArenaInComponent implements OnInit {
    }
 
    refreshShips(): void {
-      this.enemyShip = this.dataService.getEnemyShip();
+      this.enemyShip = this.dataService.getEnemyShipNoRefresh();
       this.playerShip = this.dataService.getPlayerShip();
    }
 

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { DataServiceService } from 'src/app/services/data-service.service';
+import { Component } from '@angular/core';
+import { BattleServiceService } from 'src/app/services/battle-service.service';
 import { GameModel } from 'src/Models/navModel';
 
 @Component({
@@ -9,6 +9,7 @@ import { GameModel } from 'src/Models/navModel';
 })
 export class GameComponent {
 
+   constructor(private battleService: BattleServiceService) {}
 
    gameNav: GameModel = {
       statField:     true,
@@ -19,6 +20,9 @@ export class GameComponent {
       battle:        false,
    };
 
+   initBattle(): void {
+      this.battleService.init();
+   }
 
    resetNav(): void {
       this.gameNav = {

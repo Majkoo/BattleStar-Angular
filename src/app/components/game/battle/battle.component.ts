@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { BattleServiceService } from 'src/app/services/battle-service.service';
+import { DataServiceService } from 'src/app/services/data-service.service';
 
 @Component({
   selector: 'app-battle',
@@ -8,7 +9,9 @@ import { BattleServiceService } from 'src/app/services/battle-service.service';
 })
 export class BattleComponent {
 
-   constructor(private battleService: BattleServiceService) { }
+   constructor(private battleService: BattleServiceService, private dataService: DataServiceService) { }
+
+   @Output() EndBattle = new EventEmitter<void>();
 
    BattleService = this.battleService;
    LoggerContent = this.battleService.battleLog;
@@ -74,6 +77,11 @@ export class BattleComponent {
       }
 
       this.ButtonsDisabled = false;
+
+      if (this.battleService.destroyedShip) {
+         await this.sleepNow(3000);
+         this.EndBattle.emit();
+      }
    }
 
 

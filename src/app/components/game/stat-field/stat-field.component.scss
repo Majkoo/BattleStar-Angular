@@ -17,30 +17,14 @@
       border-bottom-right-radius: 5px;
 
    }
-   #statField {
-      transition: ease 0.7s;
-      position: absolute;
-      transform: translate(-50%);
-      width: 30%;
-      height: 350px;
-
-      background-color: #3f3f7477;
-
-      border: 10px solid #37946e;
-      border-top: none;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-
-      left: 350px;
-   }
    #clickField2 {
-      position: relative;
+      position: inherit;
       transform: translate(-50%);
       width: 30px;
       height: 30px;
 
       top: 2.5%;
-      left: 95%;
+      left: 93%;
       background-color: #3f3f74;
       border: solid 3px #37946e;
       border-radius: 10px;
@@ -50,17 +34,51 @@
       font-size: 20px;
 
    }
-   .content {
-      padding-top: 0px;
-      padding-left: 35px;
-      padding-right: 35px;
-   }
-   tr {
-      padding-top: 10px;
-      font-size: 20px;
-   }
-   .title {
-      font-size: 36px;
+   #statField {
+      transition: ease 0.7s;
+      position: absolute;
+      transform: translate(-50%);
+      overflow-y: visible;
+      width: 30%;
+      height: 350px;
+
+      background-color: #3f3f74e1;
+
+      border: 10px solid #37946e;
+      border-top: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      left: 350px;
+
+      .title {
+         font-size: 36px;
+      }
+      .content {
+         position: absolute;
+         overflow: auto;
+         text-align: justify;
+
+         height: 350px;
+         width: 100%;
+         top: 0px;
+
+         .title {
+            padding-left: 20px;
+         }
+
+         table {
+            top: 0px;
+            padding-left: 20px;
+            font-size: 20px;
+            padding-bottom: 20px;
+
+            td {
+               height: 24px;
+            }
+         }
+
+      }
    }
 
    #clickField2:hover {
@@ -76,7 +94,7 @@
 #ShipImg {
    position: absolute;
    transform: translate(-50%, -50%);
-   top: 60%;
+   top: 55%;
    left: 67%;
    height: 140px;
    width: 290px;

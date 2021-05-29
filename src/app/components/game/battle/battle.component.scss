@@ -143,8 +143,12 @@
    .name {
       transform: translate(-50%,-50%);
       position:absolute;
+
       top: 0;
       left: 50%;
+      width: 500px;
+
+      text-align: center;
       font: bold;
       font-size: 28px;
    }
