@@ -28,6 +28,7 @@ export class BattleComponent {
    ButtonsDisabled = false;
    PdmgVisible = false;
    EdmgVisible = false;
+   announcement = false;
 
 
    sleepNow = (delay: number) => new Promise((resolve) => setTimeout(resolve, delay));
@@ -48,7 +49,7 @@ export class BattleComponent {
 
    }
 
-   getRandom(min, max): number {
+   getRandom(min: number, max: number): number {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min)) + min;
@@ -80,6 +81,9 @@ export class BattleComponent {
 
       if (this.battleService.destroyedShip) {
          await this.sleepNow(3000);
+         this.announcement = true;
+         await this.sleepNow(3000);
+         this.announcement = false;
          this.EndBattle.emit();
       }
    }

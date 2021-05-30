@@ -9,6 +9,7 @@ import { ShipFormComponent } from './components/ship-form/ship-form.component';
 import { StatFieldComponent } from './components/game/stat-field/stat-field.component';
 import { ArenaInComponent } from './components/game/arena-in/arena-in.component';
 import { BattleComponent } from './components/game/battle/battle.component';
+import { ShopComponent } from './components/game/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BattleComponent } from './components/game/battle/battle.component';
     ShipFormComponent,
     StatFieldComponent,
     ArenaInComponent,
-    BattleComponent
+    BattleComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,

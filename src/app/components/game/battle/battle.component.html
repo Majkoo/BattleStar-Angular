@@ -24,16 +24,6 @@
       </div>
    </div>
 
-   <div 
-   id="PlayerWin"
-   *ngIf="BattleService.destroyedShip === BattleService.EnemyBShip"> 
-   </div>
-
-   <div 
-   id="PlayerLose"
-   *ngIf="BattleService.destroyedShip === BattleService.PlayerBShip"> 
-   </div>
-
 </div>
 
 <div id="Logger">
@@ -86,7 +76,21 @@
    </button>
 
 
+</div>
 
+<div 
+   class="announcement win"
+   [ngClass]="BattleService.destroyedShip === BattleService.EnemyBShip && announcement ? 'Op1' : 'Op0'"> 
+
+   <p class="bigText"> You Win! </p>
+   <p class="smallText"> Exp gained: </p>
+</div>
+
+<div 
+class="announcement lose"
+[ngClass]="BattleService.destroyedShip === BattleService.PlayerBShip && announcement ? 'Op1' : 'Op0'"> 
+   <p class="bigText"> You Lose! </p>
+   <p class="smallText"> You gained no exp. </p>
 </div>
 
 

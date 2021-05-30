@@ -28,9 +28,9 @@ export class BattleShip {
       this.experience = experience;
       this.name = name;
 
-      (damagePoints > 0)   ? this.damage  = damagePoints * 25  : this.damage  = 25 ;
+      (damagePoints > 0)   ? this.damage  = (damagePoints * 5) + 100 : this.damage  = 100 ;
       (speedPoints > 0)    ? this.speed   = speedPoints * 10   : this.speed   = 10 ;
-      (healthPoints > 0)   ? this.health  = healthPoints * 175 : this.health  = 175;
+      (healthPoints > 0)   ? this.health  = (healthPoints * 75) + 1000 : this.health  = 1000;
       (techPoints > 0)     ? this.tech    = techPoints * 10    : this.tech    = 10 ;
       (accuracyPoints > 0) ? this.accuracy = accuracyPoints * 10 : this.accuracy  = 10 ;
    }
