@@ -7,6 +7,8 @@ import { BattleShip } from 'src/Models/shipModel';
 })
 export class DataServiceService {
 
+   stat: number[] = [ 1, 1, 1, 1, 1 ];
+
    playerData = {
       wins: 0,
       losses: 0,
@@ -35,14 +37,15 @@ export class DataServiceService {
          this.playerShipData.tech,
          this.playerShipData.accuracy,
       );
+      this.genRandStats();
       this.enemyShip = new BattleShip(
          1, 0,
          EnemyNames[this.getRandomInt(0, EnemyNames.length)],
-         this.playerShipData.damage    + this.getRandomInt(-2, 2),
-         this.playerShipData.speed     + this.getRandomInt(-2, 2),
-         this.playerShipData.health    + this.getRandomInt(-2, 2),
-         this.playerShipData.tech      + this.getRandomInt(-2, 2),
-         this.playerShipData.accuracy  + this.getRandomInt(-2, 2),
+         this.stat[0],
+         this.stat[1],
+         this.stat[2],
+         this.stat[3],
+         this.stat[4],
       );
    }
 
@@ -64,6 +67,27 @@ export class DataServiceService {
 
    getEnemyShipNoRefresh(): BattleShip {
       return this.enemyShip;
+   }
+
+   getPointsSum(): number {
+      return (
+         this.playerShipData.damage +
+         this.playerShipData.speed +
+         this.playerShipData.health +
+         this.playerShipData.tech +
+         this.playerShipData.accuracy - 5);
+   }
+
+   genRandStats(): void {
+      this.stat = [ 1, 1, 1, 1, 1 ];
+      let Points = this.getPointsSum();
+
+      while ( Points > 0 ) {
+         const rand = Math.floor(Math.random() * 5);
+         this.stat[rand]++;
+         Points--;
+      }
+
    }
 
 }

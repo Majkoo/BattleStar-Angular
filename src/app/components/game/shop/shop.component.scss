@@ -1,0 +1,45 @@
+#sus {
+   background-image: url('../../../../assets/img/Amogus.png');
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 80%;
+   height: 550px;
+   width: 400px;
+
+   .susSentence {
+      padding: 15px;
+      position: inherit;
+      top: -100px;
+      left: -75px;
+      color: #56dd93;
+      background-color: #3f3f74bd;
+      border: dashed #56dd9362 2px;
+   }
+}
+
+#shop {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   width: 600px;
+   height: 800px;
+   border: solid #56dd9362 2px;
+   top: 50%;
+   left: 33%;
+
+   .content {
+      position: absolute;
+      overflow: auto;
+
+      color: #56dd93;
+      font-size: 24px;
+      width: 600px;
+      height: 800px;
+
+      .item {
+         padding: 20px;
+         text-align: left;
+         border: solid #56dd9362 2px;
+      }
+   }
+}

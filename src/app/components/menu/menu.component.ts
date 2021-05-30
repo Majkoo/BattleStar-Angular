@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output} from '@angular/core';
-import { MenuModel } from 'src/Models/navModel';
+import { MenuModel } from 'src/Models/Nav/MenuNavModel';
 
 @Component({
   selector: 'app-menu',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppModel } from 'src/Models/navModel';
+import { AppModel } from 'src/Models/Nav/AppNavModel';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
 
    ngOnInit(): void {
       this.AppNav = {
-         game: false,
-         menu: true,
+         game: true,
+         menu: false,
       };
    }
 

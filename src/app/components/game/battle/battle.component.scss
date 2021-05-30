@@ -1,15 +1,3 @@
-#Background {
-   position: absolute;
-   overflow: disabled;
-   transform: translate(-50%, -50%);
-   top: 50%;
-   left: 50%;
-   width: 100%;
-   height: 100%;
-   background-image: url('../../../../assets/img/arenaBckg.png');
-   opacity: 0.35;
-
-}
 
 #controlPanel {
    position: absolute;
@@ -227,4 +215,11 @@
 }
 .Op0 {
    opacity: 0;
+}
+.boom {
+   position: inherit;
+   background-image: url('../../../../assets/img/boom.gif');
+   width: 40px;
+   height: 40px;
+   top: -100px;
 }

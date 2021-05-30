@@ -1,4 +1,3 @@
-<div id="Background"></div>
 
 <div id="BattleView">
 
@@ -9,7 +8,12 @@
       <div 
          class="damageTaken" 
          [ngClass]="PdmgVisible ? 'visible' : 'invisible'"> 
-         {{ PlayerDmgTaken }}HP 
+         {{ PlayerDmgInfo }}
+         <div 
+            class="boom"
+            *ngIf="PlayerDmgInfo != 'Dodged!'"
+            style="left: -80px">
+         </div>
       </div>
    </div>
 
@@ -20,8 +24,14 @@
       <div 
          class="damageTaken" 
          [ngClass]="EdmgVisible ? 'visible' : 'invisible'"> 
-         {{ EnemyDmgTaken }}HP 
+         {{ EnemyDmgInfo }}
+         <div 
+            class="boom"
+            *ngIf="EnemyDmgInfo != 'Dodged!'"
+            style="left: 100px">
+         </div>
       </div>
+      
    </div>
 
 </div>
@@ -83,7 +93,11 @@
    [ngClass]="BattleService.destroyedShip === BattleService.EnemyBShip && announcement ? 'Op1' : 'Op0'"> 
 
    <p class="bigText"> You Win! </p>
-   <p class="smallText"> Exp gained: </p>
+   <p class="smallText"> 
+      Exp gained:
+      <br>
+      Gold gained:
+   </p>
 </div>
 
 <div 

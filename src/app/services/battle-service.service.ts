@@ -97,6 +97,7 @@ export class BattleServiceService {
          HitValue = 0;
       }
       defender.cHealth = (defender.cHealth > 0) ? defender.cHealth : 0;
+      defender.log = (HitValue) ? `-${HitValue}HP` : `Dodged!`;
    }
    ModerateAttack(attacker: InBattleShip, defender: InBattleShip): void {
       let HitValue: number = (attacker.damage) + Math.floor(Math.random() * (0.4 * attacker.damage) - (0.2 * attacker.damage));
@@ -111,6 +112,7 @@ export class BattleServiceService {
          HitValue = 0;
       }
       defender.cHealth = (defender.cHealth > 0) ? defender.cHealth : 0;
+      defender.log = (HitValue) ? `-${HitValue}HP` : `Dodged!`;
    }
    RiskyAttack(attacker: InBattleShip, defender: InBattleShip): void {
       let HitValue: number = (attacker.damage * 1.6) + Math.floor(Math.random() * (0.1 * attacker.damage) - (0.05 * attacker.damage));
@@ -125,6 +127,7 @@ export class BattleServiceService {
          HitValue = 0;
       }
       defender.cHealth = (defender.cHealth > 0) ? defender.cHealth : 0;
+      defender.log = (HitValue) ? `-${HitValue}HP` : `Dodged!`;
    }
    IsAliveCheck(ship: InBattleShip): void {
       if ( ship.cHealth <= 0 ) {
@@ -153,6 +156,8 @@ class InBattleShip {
 
    dodgeChance: number;
    hitAcc: number;
+
+   log: string;
 
    constructor( name: string, health: number, damage: number, speed: number, accuracy: number ) {
       this.name = name;

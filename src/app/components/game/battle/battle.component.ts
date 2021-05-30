@@ -21,9 +21,11 @@ export class BattleComponent {
 
    EnemyDmgTaken: number;
    EnemyLRHealth = this.EnemyShip.cHealth;
+   EnemyDmgInfo: string | number;
 
    PlayerDmgTaken: number;
    PlayerLRHealth = this.PlayerShip.cHealth;
+   PlayerDmgInfo: string | number;
 
    ButtonsDisabled = false;
    PdmgVisible = false;
@@ -57,36 +59,49 @@ export class BattleComponent {
 
    async Move(pMove: number, eMove: number, PlayerShip, EnemyShip): Promise<any> {
 
+      this.PdmgVisible = false;
+      this.EdmgVisible = false;
       this.ButtonsDisabled = true;
 
-      this.PdmgVisible = false;
-      await this.sleepNow(120);
+      await this.sleepNow(100);
       this.EdmgVisible = true;
-      await this.sleepNow(120);
       this.BattleService.Move(pMove, PlayerShip, EnemyShip);
       this.refresh();
+      this.EnemyDmgInfo = this.EnemyShip.log;
 
 
       if (this.battleService.battle) {
          await this.sleepNow(1200);
          this.EdmgVisible = false;
+         await this.sleepNow(500);
+
          this.BattleService.Move(eMove, EnemyShip, PlayerShip);
-         await this.sleepNow(300);
          this.refresh();
+         this.PlayerDmgInfo = this.PlayerShip.log;
          this.PdmgVisible = true;
-         await this.sleepNow(300);
+         await this.sleepNow(1200);
+         this.PdmgVisible = false;
       }
 
       this.ButtonsDisabled = false;
 
       if (this.battleService.destroyedShip) {
-         await this.sleepNow(3000);
+         this.ButtonsDisabled = true;
+         await this.sleepNow(1500);
          this.announcement = true;
          await this.sleepNow(3000);
          this.announcement = false;
          this.EndBattle.emit();
       }
+
    }
 
 
+   CheckForDodge(dmgTaken: number, dmgInfo: string): void {
+      if (dmgTaken > 0) {
+         dmgInfo = `${dmgTaken.toString()}HP`;
+      } else {
+         dmgInfo = `Dodged!`;
+      }
+   }
 }
