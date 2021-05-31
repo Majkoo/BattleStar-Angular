@@ -1,4 +1,4 @@
-export interface AppModel {
+export interface AppNavModel {
    game: boolean;
    menu: boolean;
 }

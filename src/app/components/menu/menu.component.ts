@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output} from '@angular/core';
-import { MenuModel } from 'src/Models/Nav/MenuNavModel';
+import { MenuNavModel } from 'src/models/menu-nav.model';
 
 @Component({
   selector: 'app-menu',
@@ -10,7 +10,7 @@ export class MenuComponent implements OnInit {
 
    @Output() startGameEvent = new EventEmitter<void>();
 
-   menu: MenuModel;
+   menu: MenuNavModel;
 
    ngOnInit(): void {
       this.menu = {

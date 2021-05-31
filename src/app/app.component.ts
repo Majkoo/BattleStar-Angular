@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppModel } from 'src/Models/Nav/AppNavModel';
+import { AppNavModel } from 'src/models/app-nav.model';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { AppModel } from 'src/Models/Nav/AppNavModel';
 export class AppComponent implements OnInit {
   title = 'attempt-five';
 
-  AppNav: AppModel;
+  AppNav: AppNavModel;
 
    ngOnInit(): void {
       this.AppNav = {

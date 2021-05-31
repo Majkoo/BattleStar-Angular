@@ -1,7 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { DataServiceService } from 'src/app/services/data-service.service';
-import { Form } from 'src/Models/Form';
-import { BattleShip } from 'src/Models/shipModel';
+import { Form } from 'src/models/form.model';
 
 @Component({
    selector: 'app-ship-form',

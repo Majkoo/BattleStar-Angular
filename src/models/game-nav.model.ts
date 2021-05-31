@@ -1,4 +1,4 @@
-export interface GameModel {
+export interface GameNavModel {
    statField: boolean;
    arenaPlanet: boolean;
    shopPlanet: boolean;

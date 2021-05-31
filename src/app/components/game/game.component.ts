@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BattleServiceService } from 'src/app/services/battle-service.service';
-import { GameModel } from 'src/Models/Nav/GameNavModel';
+import { GameNavModel } from 'src/models/game-nav.model';
 
 @Component({
   selector: 'app-game',
@@ -11,7 +11,7 @@ export class GameComponent {
 
    constructor(private battleService: BattleServiceService) {}
 
-   gameNav: GameModel = {
+   gameNav: GameNavModel = {
       statField:     true,
       arenaPlanet:   true,
       shopPlanet:    true,
