@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { EnemyNames } from 'src/assets/img/arrays/EnemyNames';
+import { EnemyNames } from 'src/assets/arrays/EnemyNames';
 import { BattleShipModel } from 'src/models/battleship.model';
 
 @Injectable({
