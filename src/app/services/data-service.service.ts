@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { EnemyNames } from 'src/assets/arrays/EnemyNames';
+import { LvlUpExp } from 'src/assets/arrays/LvlUpExp';
 import { BattleShipModel } from 'src/models/battleship.model';
 
 @Injectable({
@@ -12,6 +13,11 @@ export class DataServiceService {
    playerData = {
       wins: 0,
       losses: 0,
+
+      level: 1,
+      exp: 0,
+      gold: 0,
+      points: 0,
    };
 
    playerShipData = {
@@ -21,15 +27,21 @@ export class DataServiceService {
       health: 1,
       tech: 1,
       accuracy: 1,
-      statPoints: 20,
    };
 
    playerShip: BattleShipModel;
    enemyShip: BattleShipModel;
 
    syncPoints(): void {
+
+      if (this.playerData.exp >= LvlUpExp[this.playerData.level]) {
+         this.playerData.level++;
+         this.playerData.exp = 0;
+      }
+
       this.playerShip = new BattleShip(
-         1, 0,
+         this.playerData.level,
+         this.playerData.exp,
          this.playerShipData.name,
          this.playerShipData.damage,
          this.playerShipData.speed,
@@ -39,7 +51,8 @@ export class DataServiceService {
       );
       this.genRandStats();
       this.enemyShip = new BattleShip(
-         1, 0,
+         this.playerData.level,
+         this.playerData.exp,
          EnemyNames[this.getRandomInt(0, EnemyNames.length)],
          this.stat[0],
          this.stat[1],
@@ -70,12 +83,14 @@ export class DataServiceService {
    }
 
    getPointsSum(): number {
-      return (
+      const pointsSum = (
          this.playerShipData.damage +
          this.playerShipData.speed +
          this.playerShipData.health +
          this.playerShipData.tech +
          this.playerShipData.accuracy - 5);
+
+      return pointsSum;
    }
 
    genRandStats(): void {
@@ -124,7 +139,7 @@ class BattleShip {
 
       (damagePoints > 0)   ? this.damage  = (damagePoints * 5) + 95     : this.damage  = 100 ;
       (speedPoints > 0)    ? this.speed   = (speedPoints * 5) + 5       : this.speed   = 10 ;
-      (healthPoints > 0)   ? this.health  = (healthPoints * 75) + 925   : this.health  = 1000 ;
+      (healthPoints > 0)   ? this.health  = (healthPoints * 75) + 425   : this.health  = 500 ;
       (techPoints > 0)     ? this.tech    = techPoints * 10             : this.tech    = 10 ;
       (accuracyPoints > 0) ? this.accuracy = (accuracyPoints * 5) + 5   : this.accuracy = 10 ;
    }

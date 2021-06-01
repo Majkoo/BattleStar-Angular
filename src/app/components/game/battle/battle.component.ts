@@ -27,6 +27,9 @@ export class BattleComponent {
    PlayerLRHealth = this.PlayerShip.cHealth;
    PlayerDmgInfo: string | number;
 
+   expGained: number;
+   goldGained: number;
+
    ButtonsDisabled = false;
    PdmgVisible = false;
    EdmgVisible = false;
@@ -48,6 +51,9 @@ export class BattleComponent {
       this.PlayerLRHealth = this.PlayerShip.cHealth;
       this.PlayerShip = this.battleService.PlayerBShip;
       this.PlayerLRHealth = this.PlayerShip.cHealth;
+
+      this.expGained = this.battleService.expGained;
+      this.goldGained = this.battleService.goldGained;
 
    }
 

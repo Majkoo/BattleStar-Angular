@@ -18,10 +18,12 @@ export class StatFieldComponent implements OnInit {
       ShipTech: 0,
       ShipAccuracy: 0,
 
-      ShipLevel: 0,
-      ShipExperience: 0,
       ShipWins: 0,
       ShipLoses: 0,
+      Level: 0,
+      Experience: 0,
+      Gold: 0,
+
    };
 
    constructor(dataService: DataServiceService) {
@@ -33,8 +35,9 @@ export class StatFieldComponent implements OnInit {
       this.statField.ShipTech = dataService.playerShip.tech;
       this.statField.ShipAccuracy = dataService.playerShip.accuracy;
 
-      this.statField.ShipLevel = dataService.playerShip.level;
-      this.statField.ShipExperience = dataService.playerShip.experience;
+      this.statField.Level = dataService.playerShip.level;
+      this.statField.Experience = dataService.playerShip.experience;
+      this.statField.Gold = dataService.playerData.gold;
       this.statField.ShipWins = dataService.playerData.wins;
       this.statField.ShipLoses = dataService.playerData.losses;
 

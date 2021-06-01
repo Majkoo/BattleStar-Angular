@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
 
    ngOnInit(): void {
       this.AppNav = {
-         game: false,
-         menu: true,
+         game: true,
+         menu: false,
       };
    }
 

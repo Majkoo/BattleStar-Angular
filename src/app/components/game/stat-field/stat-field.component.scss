@@ -40,7 +40,7 @@
       transform: translate(-50%);
       overflow-y: visible;
       width: 30%;
-      height: 350px;
+      height: 370px;
 
       background-color: #3f3f74e1;
 
@@ -59,9 +59,8 @@
          overflow: auto;
          text-align: justify;
 
-         height: 350px;
+         height: 370px;
          width: 100%;
-         top: 0px;
 
          .title {
             padding-left: 20px;
@@ -74,7 +73,7 @@
             padding-bottom: 20px;
 
             td {
-               height: 24px;
+               height: 20px;
             }
          }
 

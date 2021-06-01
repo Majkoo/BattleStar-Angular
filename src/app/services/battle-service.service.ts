@@ -14,6 +14,8 @@ export class BattleServiceService {
 
    selectedMove: Move;
    battleLog: string;
+   expGained: number;
+   goldGained: number;
    repairs: number;
    round: number;
    destroyedShip: InBattleShip;
@@ -137,6 +139,12 @@ export class BattleServiceService {
 
          if (this.destroyedShip === this.EnemyBShip) {
             this.dataService.playerData.wins += 1;
+
+            this.expGained = ((this.dataService.enemyShip.level * 20) + Math.floor(Math.random() * 10)) + 40;
+            this.dataService.playerData.exp += this.expGained;
+
+            this.goldGained = ((this.dataService.enemyShip.level * 2) + Math.floor(Math.random() * 10) + 20) * 10;
+            this.dataService.playerData.gold += this.goldGained;
          } else
          if (this.destroyedShip === this.PlayerBShip) {
             this.dataService.playerData.losses += 1;
