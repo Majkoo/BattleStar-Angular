@@ -1,5 +1,6 @@
 # BattleStar
 
+It's my try to develop a web app-game.
 This project is not done.
 This project will probably be rewritten in Blazor
 
