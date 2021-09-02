@@ -1,5 +1,8 @@
 # BattleStar
 
+This project is not done.
+This project will probably be rewritten in Blazor
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
 ## Development server
