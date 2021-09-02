@@ -1,3 +1,5 @@
+# Link to game: http://battlestarts.ct8.pl/
+# Keep in mind, that this project is in development stage!
 # BattleStar
 
 It's my try to develop a web app-game.
