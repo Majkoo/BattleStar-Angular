@@ -1,8 +1,8 @@
 # Link to game: http://battlestarts.ct8.pl/
-# Keep in mind, that this project is in development stage!
+# Keep in mind, that this project is frozen!
 # BattleStar
 
-It's my try to develop a web app-game.
+It's my try to develop a web app game.
 This project is not done.
 This project will probably be rewritten in Blazor
 
